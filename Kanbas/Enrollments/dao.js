@@ -13,6 +13,7 @@ export function enrollUserInCourse(userId, courseId) {
     //if the enrollment doesn't exist already, add it
     if (typeof(possibleEnrollment) === 'undefined') {
         enrollments.push({ _id: Date.now(), user: userId, course: courseId });
+        console.log("the user enrolled for a class");
     }
     //update enrollments in server
     Database.enrollments = enrollments;
