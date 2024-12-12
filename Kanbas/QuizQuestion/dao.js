@@ -14,10 +14,10 @@ export function createQuestionForQuiz(quizQuestion) {
     delete quizQuestion._id;
     return model.create(quizQuestion);
 }
-export function deleteQuizQuestion(quizQuestionId) {
+export function deleteQuizQuestion(quizId, quizQuestionId) {
     //const { assignments } = Database;
     //Database.assignments = assignments.filter((assignment) => assignment._id !== assignmentId);
-    return model.deleteOne({ _id: quizQuestionId });
+    return model.deleteOne({ _id: quizQuestionId, quiz: quizId});
 }
 
 export function updateQuizQuestion(quizId, quizQuestionId, quizUpdates) {

@@ -31,7 +31,7 @@ export default function QuizQuestionRoutes(app) {
             course: courseId,
             quiz: quizId,
         };
-        const newQuizQuestion = await quizQuestiondao.createQuizQuestion(quizQuestion);
+        const newQuizQuestion = await quizQuestiondao.createQuestionForQuiz(quizQuestion);
         res.send(newQuizQuestion);
     });
 
