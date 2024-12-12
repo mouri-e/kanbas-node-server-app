@@ -55,6 +55,7 @@ export default function CourseRoutes(app) {
         res.send(newModule);
     });
 
+    
     //GET ASSIGNMENTS FOR COURSE
     //assignments on your own
     app.get("/api/courses/:courseId/assignments", async (req, res) => {
